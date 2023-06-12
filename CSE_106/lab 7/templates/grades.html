@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet"/>
+    <script src="{{url_for('static', filename='js/grades.js')}}" defer></script>
+    <head>
+      <title>Gradebook</title>
+    </head>
+    <h6> Grades Program:</h6>
+    <div id="demo">
+      <button type="button" onclick="getGrades()">Click here to get Grades</button>
+      <table id = table></table>
+    </div>
+    <h2>Display students Grade:</h2><p id = E1_response></p>
+    <form>
+      <label for="E1">Enter a students name:</label>
+      <input type="text" id="E1" name="E1" />
+      <button type="button" id="Grade" onclick="getStudentGrade()">Find</button>
+    </form>
+    <h3>Add Student and Grade</h3>
+    <form>
+      <label for="studentNew">Enter a students name:</label>
+      <input type="text" id="studentNew" name="studentNew" />
+      <label for="percent">Enter a grade:</label>
+      <input type="E3" id="E3" name="E3" />
+      <button type="button" id="Add" onclick="createStudent()">Add</button>
+    </form>
+    <h4> Edit Student Grade</h4>
+    <form>
+      <label for="E4">Enter a students name:</label>
+      <input type="text" id="E4" name="E4" />
+      <label for="E5">Enter a grade:</label>
+      <input type="text" id="E5" name="E5" />
+      <button type="button" id="Find" onclick="editGrades()">Edit</button>
+    </form>
+    <h5>Delete Student Grade</h5>
+    <form>
+      <label for="E6">Full Name:</label>
+      <input type="text" id="E6" name="E6" />
+      <button type="button" id="Remove" onclick="deleteStudent()">Delete</button>
+    </form>
+  </body>
+</html>

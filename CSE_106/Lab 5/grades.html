@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <title>Grades Program</title>
+  <head><link rel='stylesheet' href="style.css"></head>
+  <script src="grades.js"></script>
+  <body>
+
+    <h1>Grades Program:</h1>
+    Enter a students name: <input type="text" class="display" id="E1"/>
+    <button class="gradient-hover-effect" onclick="getStudentGrade()">Get grade</button>
+    <br>
+    <div id="E1_response">
+    </div>
+    <br>
+
+    Enter a students name: <input type="text" id="name"/>
+    Enter a grade: <input type="number" id="E3"/>
+    <button type="button" onclick="createStudent()">Create student</button><br><br>
+    <br>
+
+    Enter a students name: <input type="text" class="display" id="E4"/>
+    Enter a grade: <input type="number" id="grade" name="grade" value="85.1">
+    <button type="button" onclick="editGrades()">Update grade</button><br>
+    <div id="demo"></div><br>
+
+    <br><button class="neon-button" type="button" onclick="deleteStudent()">Click here to delete the student</button><br><br><br>
+
+
+    <br><button class="neon-button" type="button" onclick="getGrades()">Click here to get grades</button><br><br><br>
+    <table id="table"></table>
+  </body>
+</html>

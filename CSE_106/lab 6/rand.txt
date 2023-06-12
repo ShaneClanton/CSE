@@ -1,0 +1,229 @@
+modify the python code so it's able to connect with the html, css and javascript code below:
+
+
+html:
+
+<!DOCTYPE html>
+<html>
+  <title>Grades Program</title>
+  <link href="{{url_for('static', file='css/style.css')}}" rel="stylesheet"/>
+  <script src="{{url_for('static', filename='js/grades.js')}}" defer></script>
+  <body>
+
+    <h1>Grades Program:</h1>
+    Enter a students name: <input type="text" class="display" id="E1"/>
+    <button class="gradient-hover-effect" onclick="getStudentGrade()">Get grade</button>
+    <br>
+    <div id="E1_response">
+    </div>
+    <br>
+
+    Enter a students name: <input type="text" id="name"/>
+    Enter a grade: <input type="number" id="E3"/>
+    <button type="button" onclick="createStudent()">Create student</button><br><br>
+    <br>
+
+    Enter a students name: <input type="text" class="display" id="E4"/>
+    Enter a grade: <input type="number" id="grade" name="grade" value="85.1">
+    <button type="button" onclick="editGrades()">Update grade</button><br>
+    <div id="demo"></div><br>
+
+    <br><button class="neon-button" type="button" onclick="deleteStudent()">Click here to delete the student</button><br><br><br>
+
+
+    <br><button class="neon-button" type="button" onclick="getGrades()">Click here to get grades</button><br><br><br>
+    <table id="table"></table>
+  </body>
+</html>
+
+
+css:
+
+body {
+    margin: 1cm;
+    color: white;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d544);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  button:hover {
+    color: white;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+    transition: background-color 15s;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 1.5cm;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"].display {
+    width: 300px;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+  }
+
+
+javascript:
+
+function getGrades() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://127.0.0.1:5000/");
+    xhttp.onload = function() {
+  
+      var data = JSON.parse(this.response);
+      var table = document.getElementById("table");
+      table.innerHTML;
+      for(i in Object.keys(data)){
+  
+        var row = table.insertRow();
+        var cell0 = row.insertCell(0);
+        var cell1 = row.insertCell(1);
+  
+        cell0.innerHTML = Object.keys(data)[i];
+        cell1.innerHTML = data[Object.keys(data)[i]];
+      }
+    };
+    xhttp.send();
+  }
+  
+  function getStudentGrade(){
+    var xhttp = new XMLHttpRequest();
+    var student = document.getElementById("E1");
+    xhttp.open("GET", "http://127.0.0.1:5000/"+student.value);
+    xhttp.onload = function() {
+    document.getElementById("E1_response").innerHTML = this.responseText;
+    };
+    xhttp.send();
+  }
+  
+  function createStudent() {
+  var name = document.getElementById("name").value;
+  var grade = document.getElementById("E3").value;
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "http://127.0.0.1:5000/");
+  xhttp.setRequestHeader("Content-Type", "application/json");
+  xhttp.onload = function() {
+    location.reload();
+  };
+  const body = {"name": name, "grade": grade};
+  xhttp.send(JSON.stringify(body));
+  }
+  
+  
+  function editGrades() {
+  var name = document.getElementById("E4").value;
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("PUT", "http://127.0.0.1:5000/grades/" + encodeURIComponent(name));
+  xhttp.setRequestHeader("Content-Type", "application/json");
+  xhttp.onload = function() {
+    location.reload();
+  };
+  const body = {"grade": document.getElementById("grade").value};
+  xhttp.send(JSON.stringify(body));
+  }
+  
+  
+  function deleteStudent() {
+  var xhttp = new XMLHttpRequest();
+  var studentName = prompt("Enter the name of the student you want to delete:");
+  xhttp.open("DELETE", "http://127.0.0.1:5000/" + studentName);
+  xhttp.onload = function() {
+    location.reload();
+  };
+  xhttp.send();
+  }
+
+python:
+
+import json
+from flask import Flask, jsonify, request, render_template
+from flask import *
+from flask import Flask, render_template
+
+app = Flask(__name__, static_url_path="/static", static_folder="static")
+grades = {
+    "Alice": 85,
+    "Bob": 72,
+    "Charlie": 90,
+    "David": 65,
+    "Eve": 42
+}
+
+@app.route('/')
+def static_file():
+    return render_template("grades.html")
+
+@app.route('/<name>', methods=['GET'])
+def get_student_grade(name):
+    print("get student grades\n")
+    print(name)
+    if name in grades:
+        print(grades[name])
+        return jsonify({name: grades[name]})
+    else:
+        return jsonify({'error': 'Student not found'})
+
+@app.route('/grades/<name>', methods=['POST', 'PUT', 'DELETE', 'GET'])
+def grades_handler():
+    if request.method == 'POST':
+        data = request.get_json()
+        grades[data['name']] = data['grade']
+
+    elif request.method == 'PUT':
+        name = request.args.get('name')
+        if name in grades:
+            data = request.get_json()
+            grades[name] = data['grade']
+
+    elif request.method == 'DELETE':
+        name = request.args.get('name')
+        if name in grades:
+            del grades[name]
+    elif request.method == 'GET':
+        print("get grades\n")
+        return jsonify({grades})
+    
+    return {}, 501
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

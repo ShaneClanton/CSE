@@ -1,0 +1,7 @@
+  <link href="style.css" rel="stylesheet"/>
+    <script src="grades.js"></script>
+
+    <link href="{{url_for('static', file='css/style.css')}}" rel="stylesheet"/>
+    <script src="{{url_for('static', filename='js/grades.js')}}" defer></script>
+
+     <table id="table"></table>
