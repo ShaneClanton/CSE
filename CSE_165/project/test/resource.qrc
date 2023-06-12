@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/pipe_up.png</file>
+        <file>images/gameOver.png</file>
+        <file>images/pipe_down.png</file>
+        <file>images/left-4.png</file>
+        <file>images/left-1.png</file>
+        <file>images/left-3.png</file>
+        <file>images/bg001.png</file>
+    </qresource>
+</RCC>
