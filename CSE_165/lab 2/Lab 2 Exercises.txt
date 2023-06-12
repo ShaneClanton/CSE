@@ -1,0 +1,72 @@
+1. If-else Statements (10 points)
+
+Write a program that reads in an integer as input, then outputs "POSITIVE" if the integer is positive and "NEGATIVE" if it is negative, and "ODD" if the integer is odd and "EVEN" if the integer is even.
+
+
+===================================================================================================
+
+
+2. While Loops (10 points)
+
+Modify the program from the previous exercise so that it keeps reading integers and classifying them as POSITIVE or NEGATIVE and ODD or EVEN until the user inputs 0, at which point the program ends. No classification should be produced for the 0. You may use a while loop or a do-while loop.
+
+
+===================================================================================================
+
+
+3. Finding Prime Numbers (20 points)
+
+Write a program that reads in an integer N and prints out all the prime numbers strictly less than N. These should be printed one per line.
+
+
+===================================================================================================
+
+
+4. Formatted Output (20 points)
+
+Write a program that keeps reading in positive integers and for each integer outputs the corresponding value in hexadecimal and binary format. Stop when a negative number is read. No output should be generated for the negative number.
+
+
+===================================================================================================
+
+
+5. Pointer Math (20 points)
+
+Write a program that takes two integers as input. Create a pointer to each of the numbers. Add, subtract, multiply, and divide the numbers together using the pointers (remember to dereference them) and output the result to the console. Note: the result of the division should be a float.
+
+
+===================================================================================================
+
+
+6. Bit Manipulation (20 points)
+
+Write a program that reads in a decimal number "n" and a position "index". Convert the decimal number into binary format and print out the number in binary format.
+Next, implement the following functions to get, set, and clear the bit at the position "index" of the number.
+Finally, using your functions, print the following three things: 1) the original bit at position "index" of "n"; 2) the number "n" with the bit at "index" set; 3) the number "n" with the bit at "index" cleared.
+
+/*
+ Retrieve a bit from a number "n" in binary format at position "index"
+ Input: number n, position index with 0 being the right most (least significant) bit
+ Output: bit at position "index"
+ Example: Input: n=1010, index=1, output=1
+*/
+int getBit(int n, int index)
+
+/*
+ Set a bit at position "index"
+ Input: number n, position index with 0 being the right most (least significant) bit
+ Output: the binary number after the bit is set at position "index"
+ Example: Input: n=1010, index=0, output=1011
+*/
+int setBit(int n, int index)
+
+/*
+ Clear a bit at position "index"
+ Input: number n, position index with 0 being the right most (least significant) bit
+ Output: the binary number after the bit is cleared at position "index"
+ Example: Input: n=1010, index=1, output=1000
+*/
+int clearBit(int n, int index)
+
+Note: To display a decimal number in 8-bit binary format, use std::bitset<8>(n).
+Example: std::bitset<8>(4) if n = 4 will output 00000100.
