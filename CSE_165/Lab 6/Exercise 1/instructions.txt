@@ -1,0 +1,22 @@
+Vector Class
+
+Design a 2D vector class called Vec. (Note, this is not meant to represent the data structure vector, but the mathematical concept of vector used for, among other things, Cartesian coordinates.)
+
+Your class Vec must contain the following:
+- two float data members called x and y
+- a default constructor (initialize variables to 0)
+- a constructor from two floats
+- a "set" method which takes two floats
+- an "add" method, which takes another Vec and adds its x and y to the local instance's x and y
+- a "print" method which prints out the values of x and y
+
+Your Vec class must allow the vectors.cpp file to run without generating any error messages.
+
+
+
+THE OUTPUT YOU ARE LOOKING FOR:
+Test 1 passed!
+Test 2 passed!
+(10, 20)
+Test 3 passed!
+Finished!

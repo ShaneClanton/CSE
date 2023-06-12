@@ -1,0 +1,49 @@
+#ifndef ANIMAL_H
+#define ANIMAL_H
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Animal {
+protected:
+	string name;
+	int age;
+
+public:
+	int static count;
+	Animal() {
+		cout << "Creating Generic Animal" << endl;
+		name = "Generic Animal";
+		age = 0;
+		this->count++;
+	}
+	
+	~Animal() {
+		cout << "Deleting Generic Animal" << endl;
+	}
+
+	string getName() {
+		return name;
+	}
+
+	void setName(string name) {
+		this->name = name;
+	}
+
+	int getAge() {
+		return age;
+	}
+
+	void setAge(int age) {
+		this->age = age;
+	}
+
+	void feed() {
+		cout << "Some food, please!" << endl;
+	}
+};
+
+#endif

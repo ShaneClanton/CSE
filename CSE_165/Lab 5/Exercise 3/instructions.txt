@@ -1,0 +1,32 @@
+More on Inheritance
+
+Suppose we wish to store several different animals in an array. 
+We do not know ahead of time what animals they will be. 
+C++ will allow us to create a vector of pointers to Animal, 
+and store in that vector any object of type Animal or a descendant of Animal.
+
+Reuse the Animal.h and Dog.h files from the previous exercise and get the 
+display.h file. 
+Then write a C++ program that reads in an integer N. This is followed by N 
+lines, where each line contains a character, a string, and an integer, 
+separated by spaces. The character will either have the value A or D, 
+indicating whether the animal described on this line is a generic animal 
+or a dog. 
+The string and the integer describe the animal's name and age, respectively.
+
+For each line of input, instantiate the appropriate object and push it to 
+the vector of pointers to Animal that you have created. 
+Once you have pushed all the animals to the vector, call the display 
+function, found in display.h, with your vector passed as an argument.
+
+
+
+SAMPLE OUTPUT
+2
+A Rex 7
+Creating Generic Animal
+D Snoopy 4
+Creating Generic Animal
+Creating Dog
+Rex
+Snoopy

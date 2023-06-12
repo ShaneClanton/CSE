@@ -1,0 +1,24 @@
+Inheritance in C++
+
+The file Animal.h contains an Animal class that stores the name and age of a 
+generic animal. Besides the appropriate constructors, getters, 
+and setters, it has a function called feed() which prints out the message 
+"Some food, please!"
+
+Dogs are one kind of animal, so we can extend the Animal class to produce a 
+Dog class. Create a Dog class which inherits from the Animal class 
+and change its constructor and destructor to print more appropriate messages 
+and change the feed() function to print a message saying "Dog food, please!"
+
+Your class should be stored in a file called Dog.h. Your solution will be 
+tested with the file animals.cpp.
+
+
+
+SAMPLE OUTPUT:
+Creating Generic Animal
+Creating Dog
+Snoopy is 4 years old.
+Dog food, please!
+Deleting Dog
+Deleting Generic Animal

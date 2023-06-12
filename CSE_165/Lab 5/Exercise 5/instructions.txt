@@ -1,0 +1,15 @@
+Constructors/Destructors
+
+Extend the Stack class given in the book in order for it to store double numbers (instead of void* pointers). 
+Add a destructor that will delete all the stack by making calls to pop(), and for each element destroyed the element will be printed to the output. 
+Now add two constructors: the default one that will create an empty stack, and another one that will receive an integer n and will build a stack of n elements, 
+such that the first element is 1.0, and the next ones are incremented by 0.1. Upload your Stack class, which will be tested for correctness with stacks.cpp.
+
+
+
+SAMPLE OUTPUT
+s1
+2 1.5 1 0.5 
+s2
+1.3 1.2 1.1 1 
+end

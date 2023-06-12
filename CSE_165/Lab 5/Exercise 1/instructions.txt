@@ -1,0 +1,25 @@
+Getters and Setters
+
+Create a C++ class named Circle in a file called Circle.h. 
+Your class should have three private double variables (x, y, and r). 
+The variables x and y will store the Cartesian position of the center of 
+the circle and the variable r will store the radius.
+
+You should also add a public variable, area, which will store the area of 
+the circle. There should be two constructors, 
+one that takes no arguments and instantiates a unit circle centered at 
+the origin. The second constructor should take in three arguments 
+(for x, y and r) 
+and instantiate a circle of radius r, centered at (x, y).
+
+There should be getters and setters for all the private variables. Your code will be tested with the circles.cpp file.
+
+
+
+SAMPLE OUTPUT
+Center: (0, 0)
+Radius: 1
+Area: 3.14159
+
+Center: (1, 2)
+Radius: 3

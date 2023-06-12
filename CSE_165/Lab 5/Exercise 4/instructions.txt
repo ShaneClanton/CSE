@@ -1,0 +1,13 @@
+Counting Objects
+
+Modify the Animal class used in previous exercises by adding a static variable named count. 
+This variable should store the number of instances of the Animal object that have been created in the program countingAnimals.cpp.
+
+
+
+SAMPLE OUTPUT
+Creating Generic Animal
+Creating Generic Animal
+2
+Deleting Generic Animal
+Deleting Generic Animal

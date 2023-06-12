@@ -1,0 +1,38 @@
+Points Inside Rectangles
+
+You are intended to use your Vec and Rect classes from the previous exercises.
+
+Write a program to do the following:
+- First, your program will continuously read as input lines with 4 floats. Each set of 4 floats will define a 2D rectangle using your Rect class. Add each Rect to a container data structure of your choice, such as std::vector. Stop reading rectangles when your program reads 4 negative float values (do not create the rectangle with 4 negative float values).
+- Next, continuously read as input lines with 2 floats. Each pair of floats here will define a 2D point using your Vec class. For each point, print out its classification (whether it is inside or outside) with respect to all previously read rectangles. Stop reading points and end the program when you read (-99.0f,-99.0f).
+
+
+
+EXAMPLE RUN:
+Type 4 floats to define a rectangle: -3 3 6 6
+Type 4 floats to define the next rectangle: -2 2 4 4
+Type 4 floats to define the next rectangle: -1 1 2 2
+Type 4 floats to define the next rectangle: -1 -1 -1 -1
+
+Type 2 floats to define a point: 0 0
+The point is INSIDE of rectangle 0
+The point is INSIDE of rectangle 1
+The point is INSIDE of rectangle 2
+
+Type 2 floats to define the next point: 2 0
+The point is INSIDE of rectangle 0
+The point is INSIDE of rectangle 1
+The point is OUTSIDE of rectangle 2
+
+Type 2 floats to define the next point: 2.5 1
+The point is INSIDE of rectangle 0
+The point is OUTSIDE of rectangle 1
+The point is OUTSIDE of rectangle 2
+
+Type 2 floats to define the next point: 4 4
+The point is OUTSIDE of rectangle 0
+The point is OUTSIDE of rectangle 1
+The point is OUTSIDE of rectangle 2
+
+Type 2 floats to define the next point: -99 -99
+Finished!

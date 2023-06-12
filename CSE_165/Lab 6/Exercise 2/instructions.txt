@@ -1,0 +1,23 @@
+Rectangle Class
+
+Design a 2D rectangle class called Rect. You are intended to use your Vec class from the previous exercise.
+
+Your class Rect must contain the following:
+- 4 floats to represent the rectangle, where two are the coordinates (x,y) of the upper-left corner of the rectangle, and the other two are the dimensions (width and height) of the rectangle
+- at least one constructor that receives the four floats defining the rectangle
+- a method called "contains" which receives a Vec as parameter and returns true if the Vec is inside the rectangle, and false if the Vec is outside the rectangle
+
+Your Rect class should allow the rectangles.cpp file to run without generating any error messages.
+
+NOTE: Because the (x,y) coordinates specify the UPPER-LEFT corner of the rectangle, the rectangle's "height" actually goes down!
+
+
+
+THE OUTPUT YOU ARE LOOKING FOR:
+Test 1 passed!
+Test 2 passed!
+Test 3 passed!
+Test 4 passed!
+Test 5 passed!
+Test 6 passed!
+Finished!
