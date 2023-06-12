@@ -1,0 +1,36 @@
+Dynamic Sortable
+
+Reuse your Sortable, Circle, Participant, and Data classes from Lab 8. (You may use the simpler version of Participant from exercise 4 of lab 8, instead of exercise 5.)
+
+Your task is to make all of your classes work correctly with sortingData.cpp. Note that sortingData.cpp creates a mixture of both Circles and Participants; this means that your compare methods cannot assume they can always simply downcast Sortable pointers to their own type. You will have to use dynamic_casts and/or the typeid function to check what kind of object the compare method receives and act accordingly. Refer to the last lecture slides on Polymorphism.
+
+When comparing two objects of the same type, use the same logic as in lab 8. But when asked to compare a Circle with a Participant or vice-versa, by definition we will consider a Circle < Participant, so that, after sorting, all Circles should show up in the Data vector before all of the Participants. (See the expected output below.)
+
+Submit your modified Circle and Participant classes.
+
+
+
+sortingData.cpp EXPECTED OUTPUT
+Waymond 24  100
+Circle with radius: 0
+Mary    27  96
+Circle with radius: 3
+John    32  100
+Circle with radius: 2
+Eliza   21  105
+Circle with radius: 4
+Ezekiel 27  96
+Circle with radius: 1
+Alex    20  101
+
+Circle with radius: 0
+Circle with radius: 1
+Circle with radius: 2
+Circle with radius: 3
+Circle with radius: 4
+Eliza   21  105
+Alex    20  101
+Waymond 24  100
+John    32  100
+Ezekiel 27  96
+Mary    27  96

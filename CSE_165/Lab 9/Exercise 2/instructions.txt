@@ -1,0 +1,8 @@
+Copy Constructors II
+
+In the previous exercise where we were counting objects, there were 3 instances of the Object class being created. One of those was being created because we passed the object into the function f by value, creating a copy. Modify the function f so that this does not happen. Your program should report that there are 2 objects, not 3. Upload your modified version of objects.cpp.
+
+
+
+objects.cpp EXPECTED OUTPUT
+2

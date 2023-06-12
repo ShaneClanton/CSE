@@ -1,0 +1,22 @@
+Operators
+
+Create a Time class.
+
+Your Time class should have the following:
+
+- Member variables for hours, minutes, and seconds.
+- Constructors for initializing the variables, and a destructor.
+- Accessor and mutator methods for the member variables.
+- A print() method which will print out the time in some format (does not necessarily have to be in the format of "Expected Output" at the end, just the values have to be correct).
+- An overloaded addition (+) operator. The addition (+) operator should return a new Time object which holds the result of the addition of the hours, minutes, and seconds of both Time objects. Remember to check that the values are within valid ranges, and adjust them if they are not. (For example, if an addition makes seconds >60, subtract the excess seconds and add to the minutes.)
+- Overloaded increment (++) operators, both postfix and prefix. The meaning of incrementing a Time is to add 1 to its hour.
+
+Your class should work with Time.cpp.
+
+
+
+Time.cpp EXPECTED OUTPUT
+5 hours, 35 minutes, 38 seconds
+23 hours, 11 minutes, 15 seconds
+0 hours, 11 minutes, 15 seconds
+11 hours, 11 minutes, 16 seconds

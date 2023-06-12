@@ -1,0 +1,11 @@
+Dynamic Array
+
+You will need to create a templated class called DynArray in order for dynArray.cpp to compile and display the correct output. (Refer to the Array example class in the lecture slides.)
+
+Provide your implementation in a header file dynArray.h.
+
+
+
+dynArray.cpp EXPECTED OUTPUT:
+0 1.68294 1.81859 0.28224 -1.5136 
+0 1 1 0 -1 

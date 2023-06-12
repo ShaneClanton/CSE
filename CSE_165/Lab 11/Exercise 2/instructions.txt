@@ -1,0 +1,19 @@
+Dynamic Array Iterator
+
+Extend your DynArray class of the previous exercise such that the iterators.cpp file works correctly. You will need to create an iterator class for your dynamic array, with begin(), at_end(), advance(), and print() methods.
+
+Provide your implementation in an updated dynArray.h file.
+
+
+
+iterators.cpp EXPECTED OUTPUT:
+0: 0
+1: 1.68294
+2: 1.81859
+3: 0.28224
+4: -1.5136
+0: 0
+1: 1
+2: 1
+3: 0
+4: -1

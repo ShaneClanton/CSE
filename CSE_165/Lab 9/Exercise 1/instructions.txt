@@ -1,0 +1,10 @@
+Copy Constructors
+
+Inspect the file objects.cpp. It creates some instances of the Object class and prints out the value of the count variable, which is a static variable that keeps track of how many instances of Object have been created.
+
+Your task is to implement the Object class. It only needs to have a static member variable named count, which should be incremented each time a new instance of the class is created. You should provide the appropriate constructors. If you are getting a count other than 3 from objects.cpp, then you are probably missing one. (Do not worry about destructors for this exercise.) Save your class in a file named Object.h.
+
+
+
+objects.cpp EXPECTED OUTPUT
+3

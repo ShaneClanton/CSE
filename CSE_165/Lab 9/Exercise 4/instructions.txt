@@ -1,0 +1,57 @@
+Dynamic Sortable II
+
+Reuse your Sortable, Circle, Participant, and Data classes once more.
+
+Modify sortingData.cpp so that instead of a fixed number of hard-coded Circles and Participants being created and added to Data, the user instead has control of manipulating the Data object via input.
+
+Create a while loop where you continuously ask the user for their choice of action, with at least the following options available:
+	'q' or 'Q' - break out of the loop and end the program
+	'c' or 'C' - add a new Circle to Data (let the user also decide on the radius of the circle)
+	't' or 'T' - add a new Participant to Data (let the user also decide on the participant's information)
+	's' or 'S' - sort the Data
+	'p' or 'P' - print the Data
+
+(You may choose different characters for each action, as long as the actions themselves are available.)
+
+Submit your modified sortingData.cpp.
+
+
+
+sortingData.cpp EXAMPLE RUN
+c 10
+Circled added
+c 5
+Circled added
+t John 20 95 
+Participant added
+c 7 
+Circled added
+t Jane 25 100
+Participant added
+c 12
+Circled added
+t Xavier 34 102
+Participant added
+t Anna 32 102
+Participant added
+p
+Circle with radius: 10
+Circle with radius: 5
+John    20  95
+Circle with radius: 7
+Jane    25  100
+Circle with radius: 12
+Xavier  34  102
+Anna    32  102
+s
+Data sorted
+p
+Circle with radius: 5
+Circle with radius: 7
+Circle with radius: 10
+Circle with radius: 12
+Anna    32  102
+Xavier  34  102
+Jane    25  100
+John    20  95
+q
