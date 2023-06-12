@@ -1,0 +1,36 @@
+You are now going to create a LinkedList class, that will work very similarly 
+to the Stack class seen in the book and used in the previous exercise.
+
+Write new methods as follows:
+
+- add( LinkedList::Link* l, int n ): will insert in the linked list, after 
+link l, a chain of n new links. Each link will store an integer that will be 
+set to receive, in order, a value starting from 0 until n-1. In the last 
+link of the list always set the next pointer to be NULL in order to mark 
+the end of the list.
+
+- print(): this method moves through the entire list printing out each 
+            integer value stored in the links.
+
+- cleanup(): updated cleanup function that will automatically delete all 
+links in the linked list, including the data stored on each link. 
+(Ignore the problems related to deleting void* for now.)
+
+Your linked list struct should be named LinkedList and should be saved in a 
+header file named LinkedList.h. The file linkedLists.cpp 
+will be used to evaluate your struct.
+
+### 3.cpp ###
+Input: There is no input. Compile the linkedLists.cpp and then run the program.
+Output:
+47.1
+0
+1
+0
+1
+2
+3
+4
+2
+3
+4

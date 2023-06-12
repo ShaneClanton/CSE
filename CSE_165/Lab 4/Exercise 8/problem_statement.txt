@@ -1,0 +1,15 @@
+In the following exercise you will again use the Stash class, but with two modifications:
+
+1) you will have a new integer member to store the desired increment to be used during re-allocation (and not a fixed 100 value as in the book);
+
+2) you will have another integer member variable to count the number of re-allocations (calls to the inflate method) the Stash class needed during its use.
+
+You will now write a variation of the run-length encoder you wrote in the previous lab using the Stash class with each entry being one character. 
+First of all you will read as input an integer that will tell how much the Stash should use as increment. Then you will read a sequence of pairs, 
+each pair containing a character and a number. For each pair (C,N), add to a Stash object the character C, N times without spaces.
+
+If a pair has a negative N number, add the character C, |N| times and then add a newline character ('\n').
+
+If a pair (&,99) is read then stop reading values, print the elements in the Stash in the order received, 
+and then print two numbers: the number of calls that were made to inflate() inside your Stash object, 
+and the total size in bytes that was allocated by the Stash object at the end (the value of the quantity variable).

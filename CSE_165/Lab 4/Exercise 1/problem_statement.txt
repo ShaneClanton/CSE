@@ -1,0 +1,8 @@
+Consider the file Stash.h. This file contains the Stash data structure from Chapter 4 of the textbook. 
+Your task is to write a program that declares an instance of Stash, fills it up with double numbers and then prints out the numbers. 
+You have to use the Stash member functions to complete this exercise.
+
+The first line of input contains an integer N. This is followed by N lines, each containing a double value. Read in these values, 
+store them in your Stash object and print out the values.
+
+After the double values have been printed out, use the appropriate member function of Stash to free up the memory your object occupied.

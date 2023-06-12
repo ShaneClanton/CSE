@@ -1,0 +1,17 @@
+One of the problems of our Stack and LinkedList classes is that if we make them handle generic types with void* pointers, 
+they will not know how to delete the elements we insert in them. We will see later how templates will solve that, 
+but for now let's practice using pointers to functions.
+
+Extend the book's Stack struct with one more member variable that will hold a pointer to the following function prototype:
+
+void deletecb (void* pt);
+
+You will then add a member function to set this pointer:
+
+void Stack::setDeleteCallback ( void (*delcb) (void* pt) );
+
+After you do this, then add the corresponding code in the cleanup method to traverse all elements of the stack, 
+deleting the links and calling the delete callback once for each stored void pointer. The user will be responsible for providing the delete callback 
+and implementing it with the correct delete call after converting the void pointer argument to its correct type.
+
+You may download the Stack.h file, make the modifications described above and submit it. Your code will be evaluated using voidPointers.cpp.

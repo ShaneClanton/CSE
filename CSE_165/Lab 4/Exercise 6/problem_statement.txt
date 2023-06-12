@@ -1,0 +1,6 @@
+Create a struct named AddressBook that stores multiple Entry structs (that you created in the previous exercise). 
+Your code must be saved in a file named AddressBook.h and should reuse your code from Entry.h.
+
+Member functions for AddressBook should be able to add an entry and print all the entries in the address book. 
+Your code will be tested with the file addressBook.cpp, which reads in several entries from standard input, 
+stores them in an AddressBook instance and prints them all out.
