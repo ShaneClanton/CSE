@@ -1,0 +1,26 @@
+Sortable Objects III
+
+This question is almost the same as the last one. You can reuse the files Data.h and Sortable.h. 
+This time we will be storing objects of the Participant class. Each Participant has a name, an age, and a score. 
+These are string, int, and double, respectively. To print a Participant simply print the name, age, and score separated by tab characters.
+
+Participant objects should be ordered by score from highest to lowest. 
+If two Participants have the same score then the younger of them takes priority and if they have the same score and the same age, 
+simply order them alphabetically. You can test your code with the file sortingParticipants.cpp.
+
+
+
+EXPECTED OUTPUT for sortingParticipants.cpp:
+Waymond 24      100
+Mary    27      96
+John    32      100
+Eliza   21      105
+Ezekiel 27      96
+Alex    20      101
+
+Eliza   21      105
+Alex    20      101
+Waymond 24      100
+John    32      100
+Ezekiel 27      96
+Mary    27      96

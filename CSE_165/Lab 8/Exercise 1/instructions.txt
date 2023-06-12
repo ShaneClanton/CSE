@@ -1,0 +1,19 @@
+Integer Sorting
+
+Write a class called Data. Your class should store a vector of (for now) integers.
+
+Your class should have the following methods:
+
+void add(int number); // Adds a number to the data set
+
+void sort(); // Sorts the data set in ascending order. You may implement any sorting algorithm here, such as bubble sort, insertion sort, merge sort, quick sort, etc... There is no need to try to implement the most efficient one, any one will do.
+
+void print(); // Prints out the entire data set on a single line, with elements separated by spaces
+
+Make sure your class works as expected with the file intSort.cpp.
+
+
+
+EXPECTED OUTPUT for intSort.cpp:
+4 5 2 3 1 
+1 2 3 4 5 

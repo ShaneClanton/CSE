@@ -1,0 +1,28 @@
+Sortable Objects
+
+Study the file Sortable.h. It contains a simple abstract class called 
+Sortable, which will act as a base class for any object a collection of 
+which can be sorted and printed.
+
+Sortable has two pure virtual methods, compare and print. 
+The compare method tells the object how to compare itself with 
+another object. It returns true if the object it is being called 
+from is smaller than the other object, and false otherwise. 
+The print method allows the 
+object to display itself.
+
+Modify your Data class so that it operates on (pointers to) Sortable 
+objects instead of int objects. You will first have to change int to 
+Sortable*. 
+You will also have to change your sort() method to use the compare() 
+method of Sortable, and the print() method to use the Sortable's print() 
+method. (Remember, you are not making Data inherit from Sortable! 
+We are doing composition here, not inheritance.)
+
+For this exercise, you are not provided any .cpp files in order to test 
+your code yet. Testing your code will involve creating a class that 
+extends Sortable and pushes some objects of that class into your Data 
+object and trying to sort and print them. 
+This is the goal of the next exercise.
+
+Submit your modified Data class.

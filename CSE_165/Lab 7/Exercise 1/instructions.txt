@@ -1,0 +1,13 @@
+References in C++
+
+Study the file refs.cpp. It makes use of a function named triple, 
+which takes in an integer and multiplies its value by 3. 
+Implement this function and submit your modified refs.cpp. 
+Your function should not use a return statement and you should not 
+modify main().
+
+
+
+refs.cpp SAMPLE OUTPUT
+Enter a number: 12
+36

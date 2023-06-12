@@ -1,0 +1,30 @@
+Sortable Objects II
+
+Reusing Data.h and Sortable.h from the previous exercise, 
+create a class called Circle which inherits from Sortable.
+
+A Circle object will only have a float radius. Circle objects are 
+compared according to radius (one Circle is smaller than another 
+Circle if its radius is smaller). Circle objects should be printed one 
+per line as follows: "Circle with radius: <x>", where <x> is the radius 
+of the circle.
+
+You can test your code with the file sortingCircles.cpp. 
+If you correctly implemented the changes to Data in the previous exercise, 
+the Circle class you create here should work with sortingCircles.cpp 
+without further modifications to Data.
+
+
+
+EXPECTED OUTPUT for sortingCircles.cpp:
+Circle with radius: 0
+Circle with radius: 3
+Circle with radius: 2
+Circle with radius: 4
+Circle with radius: 1
+
+Circle with radius: 0
+Circle with radius: 1
+Circle with radius: 2
+Circle with radius: 3
+Circle with radius: 4

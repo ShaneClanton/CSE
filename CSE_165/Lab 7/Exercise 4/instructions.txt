@@ -1,0 +1,58 @@
+Virtual Methods
+
+Create the following 3 classes:
+
+1. AppWindow class, containing:
+
+- A protected instance of a rectangle class Rect defining the AppWindow's position (x,y) and size (w,h). 
+(You may use the Rect class you developed in the previous lab. In main(), the width and height are assumed to be public and called "w" and "h".)
+
+- The following constructors to initialize the dimensions:
+
+AppWindow(); // initialize member rect's dimensions to 0
+AppWindow( float x, float y, float w, float h ); // initialize member rect's dimensions with the 4 floats
+AppWindow( const Rect& r ); // initialize member rect's dimensions with r's dimensions
+
+- A method to retrieve the member rectangle:
+
+const Rect& get_rect();
+
+- A virtual method called resize(). When this method is called, your implementation is supposed to change the dimensions of the internal rectangle of the window.
+
+virtual void resize( int w, int h );
+
+
+
+2. CircleWin class, which inherits from AppWindow, containing:
+
+- A protected float called "radius". For this class, radius is considered to be the maximum dimension among w and h of the rectangle.
+
+- The same three constructors as AppWindow. You should only initialize the value of radius in this class, after using AppWindow's constructor to initialize 
+    the inherited rectangle. (Recall the initializer list.)
+
+- An overriden resize() method such that it will recompute the radius and print it out like this: "radius: <max>", where <max> is the maximum dimension. 
+    Remember to still change the dimensions of the internal rectangle.
+
+
+
+3. RectWin class, which also inherits from AppWindow, containing:
+
+- A protected float called "area". The area is equal to w * h.
+
+- The same three constructors as AppWindow. You should only initialize the value of area in this class, after using AppWindow's constructor to initialize the 
+    inherited rectangle. (Again, recall the initializer list.)
+
+- An overriden resize() method such that it will recompute the area and print it out like this: "area: <area>". Remember to still change the dimensions of the 
+    internal rectangle.
+
+
+
+Upload your three classes in a single header file named App.h. Your code will be tested for correctness using the file virtualMethods.cpp.
+
+
+
+virtualMethods.cpp SAMPLE OUTPUT
+radius: 4
+radius: 10
+area: 12
+area: 40

@@ -1,0 +1,40 @@
+Sortable Objects IV
+
+Suppose we wish to be able to choose specifically which attribute of a Participant to sort by (name, age, or score) as opposed to the default behavior in the previous exercise. We will do this by first declaring three separate comparison functions in the .cpp file. (These functions have been defined for you in the sortingByAttribute.cpp file.)
+
+We will then add to the Participant class a static pointer to a function. (Static members of a class are shared between all instaces of the class.) This pointer should be called comp_cb and it will point to one of the comparison functions defined in the source file:
+
+static bool (*comp_cb)(const Participant*, const Participant*);
+
+Your task for this exercise is to make the necessary modifications to your Participant class to use this comparison function in the compare() method. Your class should work with sortingByAttribute.cpp. The modifications you will actually have to do to the class are minimal, but focus on understanding what is going on in the code and how the functionality is being added.
+
+
+
+EXPECTED OUTPUT for sortingByAttribute.cpp:
+Waymond 24      100
+Mary    27      96
+John    32      100
+Eliza   21      105
+Ezekiel 27      96
+Alex    20      101
+
+Alex    20      101
+Eliza   21      105
+Ezekiel 27      96
+John    32      100
+Mary    27      96
+Waymond 24      100
+
+Alex    20      101
+Eliza   21      105
+Waymond 24      100
+Mary    27      96
+Ezekiel 27      96
+John    32      100
+
+Eliza   21      105
+Alex    20      101
+Waymond 24      100
+John    32      100
+Ezekiel 27      96
+Mary    27      96
